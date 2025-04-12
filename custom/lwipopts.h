@@ -64,6 +64,7 @@
 
 #if defined __APPLE__
 #include <TargetConditionals.h>
+#include <stdlib.h>
 
 #if TARGET_OS_IPHONE
 #define LWIP_TCP_KEEPALIVE 1
@@ -156,5 +157,34 @@
 #define LWIP_STATS 0
 #define LWIP_STATS_DISPLAY 0
 #define LWIP_PERF 0
+
+/*
+   ------------------------------------
+   ---------- Memory options ----------
+   ------------------------------------
+*/
+
+/**
+ * MEM_ALIGNMENT: should be set to the alignment of the CPU
+ *    4 byte alignment -> #define MEM_ALIGNMENT 4
+ *    2 byte alignment -> #define MEM_ALIGNMENT 2
+ */
+#define MEM_ALIGNMENT                   4U
+
+/**
+ * MEM_CUSTOM_ALLOCATOR==1: Use malloc/free/realloc provided by a custom
+ * implementation instead of the lwip internal allocator. Can save code size if
+ * you already use it. If enabled, you have to define those functions:
+ */
+#define MEM_CUSTOM_ALLOCATOR            1
+
+void hev_free (void *ptr);
+#define MEM_CUSTOM_FREE hev_free
+
+void *hev_malloc (size_t size);
+#define MEM_CUSTOM_MALLOC hev_malloc
+
+void *hev_calloc (size_t nmemb, size_t size);
+#define MEM_CUSTOM_CALLOC hev_calloc
 
 #endif

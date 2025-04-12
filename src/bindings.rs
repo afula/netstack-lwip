@@ -187,59 +187,6 @@ pub const TARGET_CPU_SPARC: u32 = 0;
 pub const TARGET_CPU_ALPHA: u32 = 0;
 pub const TARGET_IPHONE_SIMULATOR: u32 = 0;
 pub const TARGET_OS_NANO: u32 = 0;
-pub const MEMP_NUM_TCP_PCB: u32 = 1024;
-pub const CHECKSUM_CHECK_IP: u32 = 0;
-pub const CHECKSUM_CHECK_UDP: u32 = 0;
-pub const CHECKSUM_CHECK_TCP: u32 = 0;
-pub const CHECKSUM_CHECK_ICMP: u32 = 0;
-pub const CHECKSUM_CHECK_ICMP6: u32 = 0;
-pub const LWIP_CHECKSUM_ON_COPY: u32 = 1;
-pub const LWIP_CHKSUM_ALGORITHM: u32 = 3;
-pub const TCP_MSS: u32 = 1460;
-pub const TCP_WND: u32 = 46720;
-pub const TCP_SND_BUF: u32 = 23360;
-pub const MEM_SIZE: u32 = 2097152;
-pub const MEMP_NUM_TCP_SEG: u32 = 4096;
-pub const PBUF_POOL_SIZE: u32 = 512;
-pub const SYS_LIGHTWEIGHT_PROT: u32 = 0;
-pub const IPV6_FRAG_COPYHEADER: u32 = 1;
-pub const LWIP_DEBUG: u32 = 0;
-pub const LWIP_STATS: u32 = 0;
-pub const LWIP_STATS_DISPLAY: u32 = 0;
-pub const LWIP_PERF: u32 = 0;
-pub const LITTLE_ENDIAN: u32 = 1234;
-pub const BIG_ENDIAN: u32 = 4321;
-pub const LWIP_TIMEVAL_PRIVATE: u32 = 0;
-pub const __has_safe_buffers: u32 = 1;
-pub const __DARWIN_ONLY_64_BIT_INO_T: u32 = 1;
-pub const __DARWIN_ONLY_UNIX_CONFORMANCE: u32 = 1;
-pub const __DARWIN_ONLY_VERS_1050: u32 = 1;
-pub const __DARWIN_UNIX03: u32 = 1;
-pub const __DARWIN_64_BIT_INO_T: u32 = 1;
-pub const __DARWIN_VERS_1050: u32 = 1;
-pub const __DARWIN_NON_CANCELABLE: u32 = 0;
-pub const __DARWIN_SUF_EXTSN: &[u8; 14] = b"$DARWIN_EXTSN\0";
-pub const __DARWIN_C_ANSI: u32 = 4096;
-pub const __DARWIN_C_FULL: u32 = 900000;
-pub const __DARWIN_C_LEVEL: u32 = 900000;
-pub const __STDC_WANT_LIB_EXT1__: u32 = 1;
-pub const __DARWIN_NO_LONG_LONG: u32 = 0;
-pub const _DARWIN_FEATURE_64_BIT_INODE: u32 = 1;
-pub const _DARWIN_FEATURE_ONLY_64_BIT_INODE: u32 = 1;
-pub const _DARWIN_FEATURE_ONLY_VERS_1050: u32 = 1;
-pub const _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE: u32 = 1;
-pub const _DARWIN_FEATURE_UNIX_CONFORMANCE: u32 = 3;
-pub const __has_ptrcheck: u32 = 0;
-pub const USE_CLANG_TYPES: u32 = 0;
-pub const __PTHREAD_SIZE__: u32 = 8176;
-pub const __PTHREAD_ATTR_SIZE__: u32 = 56;
-pub const __PTHREAD_MUTEXATTR_SIZE__: u32 = 8;
-pub const __PTHREAD_MUTEX_SIZE__: u32 = 56;
-pub const __PTHREAD_CONDATTR_SIZE__: u32 = 8;
-pub const __PTHREAD_COND_SIZE__: u32 = 40;
-pub const __PTHREAD_ONCE_SIZE__: u32 = 8;
-pub const __PTHREAD_RWLOCK_SIZE__: u32 = 192;
-pub const __PTHREAD_RWLOCKATTR_SIZE__: u32 = 16;
 pub const __API_TO_BE_DEPRECATED: u32 = 100000;
 pub const __API_TO_BE_DEPRECATED_MACOS: u32 = 100000;
 pub const __API_TO_BE_DEPRECATED_IOS: u32 = 100000;
@@ -612,71 +559,38 @@ pub const MAC_OS_VERSION_15_1: u32 = 150100;
 pub const MAC_OS_VERSION_15_2: u32 = 150200;
 pub const __MAC_OS_X_VERSION_MAX_ALLOWED: u32 = 150200;
 pub const __ENABLE_LEGACY_MAC_AVAILABILITY: u32 = 1;
-pub const __DARWIN_FD_SETSIZE: u32 = 1024;
-pub const __DARWIN_NBBY: u32 = 8;
-pub const ITIMER_REAL: u32 = 0;
-pub const ITIMER_VIRTUAL: u32 = 1;
-pub const ITIMER_PROF: u32 = 2;
-pub const FD_SETSIZE: u32 = 1024;
-pub const DST_NONE: u32 = 0;
-pub const DST_USA: u32 = 1;
-pub const DST_AUST: u32 = 2;
-pub const DST_WET: u32 = 3;
-pub const DST_MET: u32 = 4;
-pub const DST_EET: u32 = 5;
-pub const DST_CAN: u32 = 6;
+pub const __has_safe_buffers: u32 = 1;
+pub const __DARWIN_ONLY_64_BIT_INO_T: u32 = 1;
+pub const __DARWIN_ONLY_UNIX_CONFORMANCE: u32 = 1;
+pub const __DARWIN_ONLY_VERS_1050: u32 = 1;
+pub const __DARWIN_UNIX03: u32 = 1;
+pub const __DARWIN_64_BIT_INO_T: u32 = 1;
+pub const __DARWIN_VERS_1050: u32 = 1;
+pub const __DARWIN_NON_CANCELABLE: u32 = 0;
+pub const __DARWIN_SUF_EXTSN: &[u8; 14] = b"$DARWIN_EXTSN\0";
+pub const __DARWIN_C_ANSI: u32 = 4096;
+pub const __DARWIN_C_FULL: u32 = 900000;
+pub const __DARWIN_C_LEVEL: u32 = 900000;
+pub const __STDC_WANT_LIB_EXT1__: u32 = 1;
+pub const __DARWIN_NO_LONG_LONG: u32 = 0;
+pub const _DARWIN_FEATURE_64_BIT_INODE: u32 = 1;
+pub const _DARWIN_FEATURE_ONLY_64_BIT_INODE: u32 = 1;
+pub const _DARWIN_FEATURE_ONLY_VERS_1050: u32 = 1;
+pub const _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE: u32 = 1;
+pub const _DARWIN_FEATURE_UNIX_CONFORMANCE: u32 = 3;
+pub const __has_ptrcheck: u32 = 0;
+pub const USE_CLANG_TYPES: u32 = 0;
+pub const __PTHREAD_SIZE__: u32 = 8176;
+pub const __PTHREAD_ATTR_SIZE__: u32 = 56;
+pub const __PTHREAD_MUTEXATTR_SIZE__: u32 = 8;
+pub const __PTHREAD_MUTEX_SIZE__: u32 = 56;
+pub const __PTHREAD_CONDATTR_SIZE__: u32 = 8;
+pub const __PTHREAD_COND_SIZE__: u32 = 40;
+pub const __PTHREAD_ONCE_SIZE__: u32 = 8;
+pub const __PTHREAD_RWLOCK_SIZE__: u32 = 192;
+pub const __PTHREAD_RWLOCKATTR_SIZE__: u32 = 16;
 pub const __DARWIN_WCHAR_MIN: i32 = -2147483648;
 pub const _FORTIFY_SOURCE: u32 = 2;
-pub const USE_CLANG_STDDEF: u32 = 0;
-pub const TIME_UTC: u32 = 1;
-pub const _QUAD_HIGHWORD: u32 = 1;
-pub const _QUAD_LOWWORD: u32 = 0;
-pub const __DARWIN_LITTLE_ENDIAN: u32 = 1234;
-pub const __DARWIN_BIG_ENDIAN: u32 = 4321;
-pub const __DARWIN_PDP_ENDIAN: u32 = 3412;
-pub const PDP_ENDIAN: u32 = 3412;
-pub const __DARWIN_BYTE_ORDER: u32 = 1234;
-pub const BYTE_ORDER: u32 = 1234;
-pub const NBBY: u32 = 8;
-pub const USE_CLANG_STDARG: u32 = 0;
-pub const RENAME_SECLUDE: u32 = 1;
-pub const RENAME_SWAP: u32 = 2;
-pub const RENAME_EXCL: u32 = 4;
-pub const RENAME_RESERVED1: u32 = 8;
-pub const RENAME_NOFOLLOW_ANY: u32 = 16;
-pub const SEEK_SET: u32 = 0;
-pub const SEEK_CUR: u32 = 1;
-pub const SEEK_END: u32 = 2;
-pub const SEEK_HOLE: u32 = 3;
-pub const SEEK_DATA: u32 = 4;
-pub const __SLBF: u32 = 1;
-pub const __SNBF: u32 = 2;
-pub const __SRD: u32 = 4;
-pub const __SWR: u32 = 8;
-pub const __SRW: u32 = 16;
-pub const __SEOF: u32 = 32;
-pub const __SERR: u32 = 64;
-pub const __SMBF: u32 = 128;
-pub const __SAPP: u32 = 256;
-pub const __SSTR: u32 = 512;
-pub const __SOPT: u32 = 1024;
-pub const __SNPT: u32 = 2048;
-pub const __SOFF: u32 = 4096;
-pub const __SMOD: u32 = 8192;
-pub const __SALC: u32 = 16384;
-pub const __SIGN: u32 = 32768;
-pub const _IOFBF: u32 = 0;
-pub const _IOLBF: u32 = 1;
-pub const _IONBF: u32 = 2;
-pub const BUFSIZ: u32 = 1024;
-pub const EOF: i32 = -1;
-pub const FOPEN_MAX: u32 = 20;
-pub const FILENAME_MAX: u32 = 1024;
-pub const P_tmpdir: &[u8; 10] = b"/var/tmp/\0";
-pub const L_tmpnam: u32 = 1024;
-pub const TMP_MAX: u32 = 308915776;
-pub const L_ctermid: u32 = 1024;
-pub const _USE_FORTIFY_LEVEL: u32 = 2;
 pub const __DARWIN_NSIG: u32 = 32;
 pub const NSIG: u32 = 32;
 pub const _ARM_SIGNAL_: u32 = 1;
@@ -713,6 +627,7 @@ pub const SIGINFO: u32 = 29;
 pub const SIGUSR1: u32 = 30;
 pub const SIGUSR2: u32 = 31;
 pub const __DARWIN_OPAQUE_ARM_THREAD_STATE64: u32 = 0;
+pub const USE_CLANG_STDDEF: u32 = 0;
 pub const SIGEV_NONE: u32 = 0;
 pub const SIGEV_SIGNAL: u32 = 1;
 pub const SIGEV_THREAD: u32 = 3;
@@ -925,9 +840,96 @@ pub const WCONTINUED: u32 = 16;
 pub const WNOWAIT: u32 = 32;
 pub const WAIT_ANY: i32 = -1;
 pub const WAIT_MYPGRP: u32 = 0;
+pub const _QUAD_HIGHWORD: u32 = 1;
+pub const _QUAD_LOWWORD: u32 = 0;
+pub const __DARWIN_LITTLE_ENDIAN: u32 = 1234;
+pub const __DARWIN_BIG_ENDIAN: u32 = 4321;
+pub const __DARWIN_PDP_ENDIAN: u32 = 3412;
+pub const LITTLE_ENDIAN: u32 = 1234;
+pub const BIG_ENDIAN: u32 = 4321;
+pub const PDP_ENDIAN: u32 = 3412;
+pub const __DARWIN_BYTE_ORDER: u32 = 1234;
+pub const BYTE_ORDER: u32 = 1234;
 pub const EXIT_FAILURE: u32 = 1;
 pub const EXIT_SUCCESS: u32 = 0;
 pub const RAND_MAX: u32 = 2147483647;
+pub const MEMP_NUM_TCP_PCB: u32 = 1024;
+pub const CHECKSUM_CHECK_IP: u32 = 0;
+pub const CHECKSUM_CHECK_UDP: u32 = 0;
+pub const CHECKSUM_CHECK_TCP: u32 = 0;
+pub const CHECKSUM_CHECK_ICMP: u32 = 0;
+pub const CHECKSUM_CHECK_ICMP6: u32 = 0;
+pub const LWIP_CHECKSUM_ON_COPY: u32 = 1;
+pub const LWIP_CHKSUM_ALGORITHM: u32 = 3;
+pub const TCP_MSS: u32 = 1460;
+pub const TCP_WND: u32 = 46720;
+pub const TCP_SND_BUF: u32 = 23360;
+pub const MEM_SIZE: u32 = 2097152;
+pub const MEMP_NUM_TCP_SEG: u32 = 4096;
+pub const PBUF_POOL_SIZE: u32 = 512;
+pub const SYS_LIGHTWEIGHT_PROT: u32 = 0;
+pub const IPV6_FRAG_COPYHEADER: u32 = 1;
+pub const LWIP_DEBUG: u32 = 0;
+pub const LWIP_STATS: u32 = 0;
+pub const LWIP_STATS_DISPLAY: u32 = 0;
+pub const LWIP_PERF: u32 = 0;
+pub const MEM_ALIGNMENT: u32 = 4;
+pub const MEM_CUSTOM_ALLOCATOR: u32 = 1;
+pub const LWIP_TIMEVAL_PRIVATE: u32 = 0;
+pub const __DARWIN_FD_SETSIZE: u32 = 1024;
+pub const __DARWIN_NBBY: u32 = 8;
+pub const ITIMER_REAL: u32 = 0;
+pub const ITIMER_VIRTUAL: u32 = 1;
+pub const ITIMER_PROF: u32 = 2;
+pub const FD_SETSIZE: u32 = 1024;
+pub const DST_NONE: u32 = 0;
+pub const DST_USA: u32 = 1;
+pub const DST_AUST: u32 = 2;
+pub const DST_WET: u32 = 3;
+pub const DST_MET: u32 = 4;
+pub const DST_EET: u32 = 5;
+pub const DST_CAN: u32 = 6;
+pub const TIME_UTC: u32 = 1;
+pub const NBBY: u32 = 8;
+pub const USE_CLANG_STDARG: u32 = 0;
+pub const RENAME_SECLUDE: u32 = 1;
+pub const RENAME_SWAP: u32 = 2;
+pub const RENAME_EXCL: u32 = 4;
+pub const RENAME_RESERVED1: u32 = 8;
+pub const RENAME_NOFOLLOW_ANY: u32 = 16;
+pub const SEEK_SET: u32 = 0;
+pub const SEEK_CUR: u32 = 1;
+pub const SEEK_END: u32 = 2;
+pub const SEEK_HOLE: u32 = 3;
+pub const SEEK_DATA: u32 = 4;
+pub const __SLBF: u32 = 1;
+pub const __SNBF: u32 = 2;
+pub const __SRD: u32 = 4;
+pub const __SWR: u32 = 8;
+pub const __SRW: u32 = 16;
+pub const __SEOF: u32 = 32;
+pub const __SERR: u32 = 64;
+pub const __SMBF: u32 = 128;
+pub const __SAPP: u32 = 256;
+pub const __SSTR: u32 = 512;
+pub const __SOPT: u32 = 1024;
+pub const __SNPT: u32 = 2048;
+pub const __SOFF: u32 = 4096;
+pub const __SMOD: u32 = 8192;
+pub const __SALC: u32 = 16384;
+pub const __SIGN: u32 = 32768;
+pub const _IOFBF: u32 = 0;
+pub const _IOLBF: u32 = 1;
+pub const _IONBF: u32 = 2;
+pub const BUFSIZ: u32 = 1024;
+pub const EOF: i32 = -1;
+pub const FOPEN_MAX: u32 = 20;
+pub const FILENAME_MAX: u32 = 1024;
+pub const P_tmpdir: &[u8; 10] = b"/var/tmp/\0";
+pub const L_tmpnam: u32 = 1024;
+pub const TMP_MAX: u32 = 308915776;
+pub const L_ctermid: u32 = 1024;
+pub const _USE_FORTIFY_LEVEL: u32 = 2;
 pub const LWIP_NO_STDDEF_H: u32 = 0;
 pub const LWIP_NO_STDINT_H: u32 = 0;
 pub const LWIP_HAVE_INT64: u32 = 1;
@@ -1573,10 +1575,8 @@ pub const LWIP_MPU_COMPATIBLE: u32 = 0;
 pub const LWIP_TCPIP_CORE_LOCKING: u32 = 1;
 pub const LWIP_TCPIP_CORE_LOCKING_INPUT: u32 = 0;
 pub const MEM_LIBC_MALLOC: u32 = 0;
-pub const MEM_CUSTOM_ALLOCATOR: u32 = 0;
 pub const MEMP_MEM_MALLOC: u32 = 0;
 pub const MEMP_MEM_INIT: u32 = 0;
-pub const MEM_ALIGNMENT: u32 = 1;
 pub const MEMP_OVERFLOW_CHECK: u32 = 0;
 pub const MEMP_SANITY_CHECK: u32 = 0;
 pub const MEM_OVERFLOW_CHECK: u32 = 0;
@@ -1859,7 +1859,7 @@ pub const PBUF_FLAG_LLBCAST: u32 = 8;
 pub const PBUF_FLAG_LLMCAST: u32 = 16;
 pub const PBUF_FLAG_TCP_FIN: u32 = 32;
 pub const PBUF_POOL_FREE_OOSEQ: u32 = 1;
-pub const MEM_SIZE_F: &[u8; 2] = b"u\0";
+pub const MEM_SIZE_F: &[u8; 3] = b"lu\0";
 pub const MEMP_SIZE: u32 = 0;
 pub const NETIF_MAX_HWADDR_LEN: u32 = 6;
 pub const NETIF_NAMESIZE: u32 = 6;
@@ -2084,6 +2084,16 @@ pub type __darwin_pthread_once_t = _opaque_pthread_once_t;
 pub type __darwin_pthread_rwlock_t = _opaque_pthread_rwlock_t;
 pub type __darwin_pthread_rwlockattr_t = _opaque_pthread_rwlockattr_t;
 pub type __darwin_pthread_t = *mut _opaque_pthread_t;
+pub type __darwin_nl_item = ::std::os::raw::c_int;
+pub type __darwin_wctrans_t = ::std::os::raw::c_int;
+pub type __darwin_wctype_t = __uint32_t;
+pub const idtype_t_P_ALL: idtype_t = 0;
+pub const idtype_t_P_PID: idtype_t = 1;
+pub const idtype_t_P_PGID: idtype_t = 2;
+pub type idtype_t = ::std::os::raw::c_uint;
+pub type pid_t = __darwin_pid_t;
+pub type id_t = __darwin_id_t;
+pub type sig_atomic_t = ::std::os::raw::c_int;
 pub type u_int8_t = ::std::os::raw::c_uchar;
 pub type u_int16_t = ::std::os::raw::c_ushort;
 pub type u_int32_t = ::std::os::raw::c_uint;
@@ -2097,838 +2107,6 @@ pub type user_ulong_t = u_int64_t;
 pub type user_time_t = i64;
 pub type user_off_t = i64;
 pub type syscall_arg_t = u_int64_t;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct fd_set {
-    pub fds_bits: [__int32_t; 32usize],
-}
-unsafe extern "C" {
-    pub fn __darwin_check_fd_set_overflow(
-        arg1: ::std::os::raw::c_int,
-        arg2: *const ::std::os::raw::c_void,
-        arg3: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct timespec {
-    pub tv_sec: __darwin_time_t,
-    pub tv_nsec: ::std::os::raw::c_long,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct timeval {
-    pub tv_sec: __darwin_time_t,
-    pub tv_usec: __darwin_suseconds_t,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct timeval64 {
-    pub tv_sec: __int64_t,
-    pub tv_usec: __int64_t,
-}
-pub type time_t = __darwin_time_t;
-pub type suseconds_t = __darwin_suseconds_t;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct itimerval {
-    pub it_interval: timeval,
-    pub it_value: timeval,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct timezone {
-    pub tz_minuteswest: ::std::os::raw::c_int,
-    pub tz_dsttime: ::std::os::raw::c_int,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct clockinfo {
-    pub hz: ::std::os::raw::c_int,
-    pub tick: ::std::os::raw::c_int,
-    pub tickadj: ::std::os::raw::c_int,
-    pub stathz: ::std::os::raw::c_int,
-    pub profhz: ::std::os::raw::c_int,
-}
-pub type __darwin_nl_item = ::std::os::raw::c_int;
-pub type __darwin_wctrans_t = ::std::os::raw::c_int;
-pub type __darwin_wctype_t = __uint32_t;
-pub type clock_t = __darwin_clock_t;
-pub type size_t = __darwin_size_t;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct tm {
-    pub tm_sec: ::std::os::raw::c_int,
-    pub tm_min: ::std::os::raw::c_int,
-    pub tm_hour: ::std::os::raw::c_int,
-    pub tm_mday: ::std::os::raw::c_int,
-    pub tm_mon: ::std::os::raw::c_int,
-    pub tm_year: ::std::os::raw::c_int,
-    pub tm_wday: ::std::os::raw::c_int,
-    pub tm_yday: ::std::os::raw::c_int,
-    pub tm_isdst: ::std::os::raw::c_int,
-    pub tm_gmtoff: ::std::os::raw::c_long,
-    pub tm_zone: *mut ::std::os::raw::c_char,
-}
-unsafe extern "C" {
-    pub static mut tzname: [*mut ::std::os::raw::c_char; 0usize];
-}
-unsafe extern "C" {
-    pub static mut getdate_err: ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub static mut timezone: ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub static mut daylight: ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn asctime(arg1: *const tm) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn clock() -> clock_t;
-}
-unsafe extern "C" {
-    pub fn ctime(arg1: *const time_t) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn difftime(arg1: time_t, arg2: time_t) -> f64;
-}
-unsafe extern "C" {
-    pub fn getdate(arg1: *const ::std::os::raw::c_char) -> *mut tm;
-}
-unsafe extern "C" {
-    pub fn gmtime(arg1: *const time_t) -> *mut tm;
-}
-unsafe extern "C" {
-    pub fn localtime(arg1: *const time_t) -> *mut tm;
-}
-unsafe extern "C" {
-    pub fn mktime(arg1: *mut tm) -> time_t;
-}
-unsafe extern "C" {
-    pub fn strftime(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: size_t,
-        arg3: *const ::std::os::raw::c_char,
-        arg4: *const tm,
-    ) -> size_t;
-}
-unsafe extern "C" {
-    pub fn strptime(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: *mut tm,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn time(arg1: *mut time_t) -> time_t;
-}
-unsafe extern "C" {
-    pub fn tzset();
-}
-unsafe extern "C" {
-    pub fn asctime_r(
-        arg1: *const tm,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn ctime_r(
-        arg1: *const time_t,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn gmtime_r(arg1: *const time_t, arg2: *mut tm) -> *mut tm;
-}
-unsafe extern "C" {
-    pub fn localtime_r(arg1: *const time_t, arg2: *mut tm) -> *mut tm;
-}
-unsafe extern "C" {
-    pub fn posix2time(arg1: time_t) -> time_t;
-}
-unsafe extern "C" {
-    pub fn tzsetwall();
-}
-unsafe extern "C" {
-    pub fn time2posix(arg1: time_t) -> time_t;
-}
-unsafe extern "C" {
-    pub fn timelocal(arg1: *mut tm) -> time_t;
-}
-unsafe extern "C" {
-    pub fn timegm(arg1: *mut tm) -> time_t;
-}
-unsafe extern "C" {
-    pub fn nanosleep(__rqtp: *const timespec, __rmtp: *mut timespec) -> ::std::os::raw::c_int;
-}
-pub const clockid_t__CLOCK_REALTIME: clockid_t = 0;
-pub const clockid_t__CLOCK_MONOTONIC: clockid_t = 6;
-pub const clockid_t__CLOCK_MONOTONIC_RAW: clockid_t = 4;
-pub const clockid_t__CLOCK_MONOTONIC_RAW_APPROX: clockid_t = 5;
-pub const clockid_t__CLOCK_UPTIME_RAW: clockid_t = 8;
-pub const clockid_t__CLOCK_UPTIME_RAW_APPROX: clockid_t = 9;
-pub const clockid_t__CLOCK_PROCESS_CPUTIME_ID: clockid_t = 12;
-pub const clockid_t__CLOCK_THREAD_CPUTIME_ID: clockid_t = 16;
-pub type clockid_t = ::std::os::raw::c_uint;
-unsafe extern "C" {
-    pub fn clock_getres(__clock_id: clockid_t, __res: *mut timespec) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn clock_gettime(__clock_id: clockid_t, __tp: *mut timespec) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn clock_gettime_nsec_np(__clock_id: clockid_t) -> __uint64_t;
-}
-unsafe extern "C" {
-    pub fn clock_settime(__clock_id: clockid_t, __tp: *const timespec) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn timespec_get(ts: *mut timespec, base: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn adjtime(arg1: *const timeval, arg2: *mut timeval) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn futimes(arg1: ::std::os::raw::c_int, arg2: *const timeval) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn lutimes(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const timeval,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn settimeofday(arg1: *const timeval, arg2: *const timezone) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn getitimer(arg1: ::std::os::raw::c_int, arg2: *mut itimerval) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn gettimeofday(
-        arg1: *mut timeval,
-        arg2: *mut ::std::os::raw::c_void,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn select(
-        arg1: ::std::os::raw::c_int,
-        arg2: *mut fd_set,
-        arg3: *mut fd_set,
-        arg4: *mut fd_set,
-        arg5: *mut timeval,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn setitimer(
-        arg1: ::std::os::raw::c_int,
-        arg2: *const itimerval,
-        arg3: *mut itimerval,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn utimes(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const timeval,
-    ) -> ::std::os::raw::c_int;
-}
-pub type u_char = ::std::os::raw::c_uchar;
-pub type u_short = ::std::os::raw::c_ushort;
-pub type u_int = ::std::os::raw::c_uint;
-pub type u_long = ::std::os::raw::c_ulong;
-pub type ushort = ::std::os::raw::c_ushort;
-pub type uint = ::std::os::raw::c_uint;
-pub type u_quad_t = u_int64_t;
-pub type quad_t = i64;
-pub type qaddr_t = *mut quad_t;
-pub type caddr_t = *mut ::std::os::raw::c_char;
-pub type daddr_t = i32;
-pub type dev_t = __darwin_dev_t;
-pub type fixpt_t = u_int32_t;
-pub type blkcnt_t = __darwin_blkcnt_t;
-pub type blksize_t = __darwin_blksize_t;
-pub type gid_t = __darwin_gid_t;
-pub type in_addr_t = __uint32_t;
-pub type in_port_t = __uint16_t;
-pub type ino_t = __darwin_ino_t;
-pub type ino64_t = __darwin_ino64_t;
-pub type key_t = __int32_t;
-pub type mode_t = __darwin_mode_t;
-pub type nlink_t = __uint16_t;
-pub type id_t = __darwin_id_t;
-pub type pid_t = __darwin_pid_t;
-pub type off_t = __darwin_off_t;
-pub type segsz_t = i32;
-pub type swblk_t = i32;
-pub type uid_t = __darwin_uid_t;
-pub type ssize_t = __darwin_ssize_t;
-pub type useconds_t = __darwin_useconds_t;
-pub type rsize_t = __darwin_size_t;
-pub type errno_t = ::std::os::raw::c_int;
-pub type fd_mask = __int32_t;
-pub type pthread_attr_t = __darwin_pthread_attr_t;
-pub type pthread_cond_t = __darwin_pthread_cond_t;
-pub type pthread_condattr_t = __darwin_pthread_condattr_t;
-pub type pthread_mutex_t = __darwin_pthread_mutex_t;
-pub type pthread_mutexattr_t = __darwin_pthread_mutexattr_t;
-pub type pthread_once_t = __darwin_pthread_once_t;
-pub type pthread_rwlock_t = __darwin_pthread_rwlock_t;
-pub type pthread_rwlockattr_t = __darwin_pthread_rwlockattr_t;
-pub type pthread_t = __darwin_pthread_t;
-pub type pthread_key_t = __darwin_pthread_key_t;
-pub type fsblkcnt_t = __darwin_fsblkcnt_t;
-pub type fsfilcnt_t = __darwin_fsfilcnt_t;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct sio_status_s {
-    _unused: [u8; 0],
-}
-pub type sio_status_t = sio_status_s;
-pub type sys_prot_t = ::std::os::raw::c_uint;
-pub type va_list = __darwin_va_list;
-unsafe extern "C" {
-    pub fn renameat(
-        arg1: ::std::os::raw::c_int,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-        arg4: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn renamex_np(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn renameatx_np(
-        arg1: ::std::os::raw::c_int,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-        arg4: *const ::std::os::raw::c_char,
-        arg5: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn printf(arg1: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
-}
-pub type fpos_t = __darwin_off_t;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __sbuf {
-    pub _base: *mut ::std::os::raw::c_uchar,
-    pub _size: ::std::os::raw::c_int,
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __sFILEX {
-    _unused: [u8; 0],
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __sFILE {
-    pub _p: *mut ::std::os::raw::c_uchar,
-    pub _r: ::std::os::raw::c_int,
-    pub _w: ::std::os::raw::c_int,
-    pub _flags: ::std::os::raw::c_short,
-    pub _file: ::std::os::raw::c_short,
-    pub _bf: __sbuf,
-    pub _lbfsize: ::std::os::raw::c_int,
-    pub _cookie: *mut ::std::os::raw::c_void,
-    pub _close: ::std::option::Option<
-        unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
-    >,
-    pub _read: ::std::option::Option<
-        unsafe extern "C" fn(
-            arg1: *mut ::std::os::raw::c_void,
-            arg2: *mut ::std::os::raw::c_char,
-            arg3: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
-    >,
-    pub _seek: ::std::option::Option<
-        unsafe extern "C" fn(
-            arg1: *mut ::std::os::raw::c_void,
-            arg2: fpos_t,
-            arg3: ::std::os::raw::c_int,
-        ) -> fpos_t,
-    >,
-    pub _write: ::std::option::Option<
-        unsafe extern "C" fn(
-            arg1: *mut ::std::os::raw::c_void,
-            arg2: *const ::std::os::raw::c_char,
-            arg3: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
-    >,
-    pub _ub: __sbuf,
-    pub _extra: *mut __sFILEX,
-    pub _ur: ::std::os::raw::c_int,
-    pub _ubuf: [::std::os::raw::c_uchar; 3usize],
-    pub _nbuf: [::std::os::raw::c_uchar; 1usize],
-    pub _lb: __sbuf,
-    pub _blksize: ::std::os::raw::c_int,
-    pub _offset: fpos_t,
-}
-pub type FILE = __sFILE;
-unsafe extern "C" {
-    pub static mut __stdinp: *mut FILE;
-}
-unsafe extern "C" {
-    pub static mut __stdoutp: *mut FILE;
-}
-unsafe extern "C" {
-    pub static mut __stderrp: *mut FILE;
-}
-unsafe extern "C" {
-    pub fn clearerr(arg1: *mut FILE);
-}
-unsafe extern "C" {
-    pub fn fclose(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn feof(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn ferror(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fflush(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fgetc(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fgetpos(arg1: *mut FILE, arg2: *mut fpos_t) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fgets(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut FILE,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn fopen(
-        __filename: *const ::std::os::raw::c_char,
-        __mode: *const ::std::os::raw::c_char,
-    ) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn fprintf(
-        arg1: *mut FILE,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fputc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fputs(arg1: *const ::std::os::raw::c_char, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fread(
-        __ptr: *mut ::std::os::raw::c_void,
-        __size: ::std::os::raw::c_ulong,
-        __nitems: ::std::os::raw::c_ulong,
-        __stream: *mut FILE,
-    ) -> ::std::os::raw::c_ulong;
-}
-unsafe extern "C" {
-    pub fn freopen(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: *mut FILE,
-    ) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn fscanf(
-        arg1: *mut FILE,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fseek(
-        arg1: *mut FILE,
-        arg2: ::std::os::raw::c_long,
-        arg3: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fsetpos(arg1: *mut FILE, arg2: *const fpos_t) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn ftell(arg1: *mut FILE) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn fwrite(
-        __ptr: *const ::std::os::raw::c_void,
-        __size: ::std::os::raw::c_ulong,
-        __nitems: ::std::os::raw::c_ulong,
-        __stream: *mut FILE,
-    ) -> ::std::os::raw::c_ulong;
-}
-unsafe extern "C" {
-    pub fn getc(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn getchar() -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn gets(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn perror(arg1: *const ::std::os::raw::c_char);
-}
-unsafe extern "C" {
-    pub fn putc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn putchar(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn puts(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn remove(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn rename(
-        __old: *const ::std::os::raw::c_char,
-        __new: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn rewind(arg1: *mut FILE);
-}
-unsafe extern "C" {
-    pub fn scanf(arg1: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn setbuf(arg1: *mut FILE, arg2: *mut ::std::os::raw::c_char);
-}
-unsafe extern "C" {
-    pub fn setvbuf(
-        arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-        arg4: size_t,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn sprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn sscanf(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn tmpfile() -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn tmpnam(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn ungetc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vfprintf(
-        arg1: *mut FILE,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vprintf(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vsprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn ctermid(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn fdopen(arg1: ::std::os::raw::c_int, arg2: *const ::std::os::raw::c_char) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn fileno(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn pclose(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn popen(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-    ) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn __srget(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn __svfscanf(
-        arg1: *mut FILE,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn __swbuf(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn flockfile(arg1: *mut FILE);
-}
-unsafe extern "C" {
-    pub fn ftrylockfile(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn funlockfile(arg1: *mut FILE);
-}
-unsafe extern "C" {
-    pub fn getc_unlocked(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn getchar_unlocked() -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn putc_unlocked(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn putchar_unlocked(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn getw(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn putw(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn tempnam(
-        __dir: *const ::std::os::raw::c_char,
-        __prefix: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn fseeko(
-        __stream: *mut FILE,
-        __offset: off_t,
-        __whence: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn ftello(__stream: *mut FILE) -> off_t;
-}
-unsafe extern "C" {
-    pub fn snprintf(
-        __str: *mut ::std::os::raw::c_char,
-        __size: ::std::os::raw::c_ulong,
-        __format: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vfscanf(
-        __stream: *mut FILE,
-        __format: *const ::std::os::raw::c_char,
-        arg1: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vscanf(
-        __format: *const ::std::os::raw::c_char,
-        arg1: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vsnprintf(
-        __str: *mut ::std::os::raw::c_char,
-        __size: ::std::os::raw::c_ulong,
-        __format: *const ::std::os::raw::c_char,
-        arg1: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vsscanf(
-        __str: *const ::std::os::raw::c_char,
-        __format: *const ::std::os::raw::c_char,
-        arg1: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn dprintf(
-        arg1: ::std::os::raw::c_int,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vdprintf(
-        arg1: ::std::os::raw::c_int,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn getdelim(
-        __linep: *mut *mut ::std::os::raw::c_char,
-        __linecapp: *mut size_t,
-        __delimiter: ::std::os::raw::c_int,
-        __stream: *mut FILE,
-    ) -> ssize_t;
-}
-unsafe extern "C" {
-    pub fn getline(
-        __linep: *mut *mut ::std::os::raw::c_char,
-        __linecapp: *mut size_t,
-        __stream: *mut FILE,
-    ) -> ssize_t;
-}
-unsafe extern "C" {
-    pub fn fmemopen(
-        __buf: *mut ::std::os::raw::c_void,
-        __size: size_t,
-        __mode: *const ::std::os::raw::c_char,
-    ) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn open_memstream(
-        __bufp: *mut *mut ::std::os::raw::c_char,
-        __sizep: *mut size_t,
-    ) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub static sys_nerr: ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub static sys_errlist: [*const ::std::os::raw::c_char; 0usize];
-}
-unsafe extern "C" {
-    pub fn asprintf(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn ctermid_r(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn fgetln(arg1: *mut FILE, arg2: *mut size_t) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn fmtcheck(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-    ) -> *const ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn fpurge(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn setbuffer(
-        arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-    );
-}
-unsafe extern "C" {
-    pub fn setlinebuf(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vasprintf(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn funopen(
-        arg1: *const ::std::os::raw::c_void,
-        arg2: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *mut ::std::os::raw::c_void,
-                arg2: *mut ::std::os::raw::c_char,
-                arg3: ::std::os::raw::c_int,
-            ) -> ::std::os::raw::c_int,
-        >,
-        arg3: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *mut ::std::os::raw::c_void,
-                arg2: *const ::std::os::raw::c_char,
-                arg3: ::std::os::raw::c_int,
-            ) -> ::std::os::raw::c_int,
-        >,
-        arg4: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *mut ::std::os::raw::c_void,
-                arg2: fpos_t,
-                arg3: ::std::os::raw::c_int,
-            ) -> fpos_t,
-        >,
-        arg5: ::std::option::Option<
-            unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
-        >,
-    ) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn __sprintf_chk(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
-        arg3: size_t,
-        arg4: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn __snprintf_chk(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: size_t,
-        arg3: ::std::os::raw::c_int,
-        arg4: size_t,
-        arg5: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn __vsprintf_chk(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
-        arg3: size_t,
-        arg4: *const ::std::os::raw::c_char,
-        arg5: va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn __vsnprintf_chk(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: size_t,
-        arg3: ::std::os::raw::c_int,
-        arg4: size_t,
-        arg5: *const ::std::os::raw::c_char,
-        arg6: va_list,
-    ) -> ::std::os::raw::c_int;
-}
-pub const idtype_t_P_ALL: idtype_t = 0;
-pub const idtype_t_P_PID: idtype_t = 1;
-pub const idtype_t_P_PGID: idtype_t = 2;
-pub type idtype_t = ::std::os::raw::c_uint;
-pub type sig_atomic_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __darwin_arm_exception_state {
@@ -3043,6 +2221,7 @@ pub struct __darwin_mcontext64 {
     pub __ns: __darwin_arm_neon_state64,
 }
 pub type mcontext_t = *mut __darwin_mcontext64;
+pub type pthread_attr_t = __darwin_pthread_attr_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __darwin_sigaltstack {
@@ -3063,6 +2242,8 @@ pub struct __darwin_ucontext {
 }
 pub type ucontext_t = __darwin_ucontext;
 pub type sigset_t = __darwin_sigset_t;
+pub type size_t = __darwin_size_t;
+pub type uid_t = __darwin_uid_t;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union sigval {
@@ -3171,6 +2352,12 @@ pub type uint_fast32_t = u32;
 pub type uint_fast64_t = u64;
 pub type intmax_t = ::std::os::raw::c_long;
 pub type uintmax_t = ::std::os::raw::c_ulong;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct timeval {
+    pub tv_sec: __darwin_time_t,
+    pub tv_usec: __darwin_suseconds_t,
+}
 pub type rlim_t = __uint64_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -4282,6 +3469,8 @@ unsafe extern "C" {
 unsafe extern "C" {
     pub fn unsetenv(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
+pub type dev_t = __darwin_dev_t;
+pub type mode_t = __darwin_mode_t;
 unsafe extern "C" {
     pub fn arc4random() -> u32;
 }
@@ -4550,6 +3739,826 @@ unsafe extern "C" {
 }
 unsafe extern "C" {
     pub static mut suboptarg: *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn hev_free(ptr: *mut ::std::os::raw::c_void);
+}
+unsafe extern "C" {
+    pub fn hev_malloc(size: size_t) -> *mut ::std::os::raw::c_void;
+}
+unsafe extern "C" {
+    pub fn hev_calloc(nmemb: size_t, size: size_t) -> *mut ::std::os::raw::c_void;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct fd_set {
+    pub fds_bits: [__int32_t; 32usize],
+}
+unsafe extern "C" {
+    pub fn __darwin_check_fd_set_overflow(
+        arg1: ::std::os::raw::c_int,
+        arg2: *const ::std::os::raw::c_void,
+        arg3: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct timespec {
+    pub tv_sec: __darwin_time_t,
+    pub tv_nsec: ::std::os::raw::c_long,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct timeval64 {
+    pub tv_sec: __int64_t,
+    pub tv_usec: __int64_t,
+}
+pub type time_t = __darwin_time_t;
+pub type suseconds_t = __darwin_suseconds_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct itimerval {
+    pub it_interval: timeval,
+    pub it_value: timeval,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct timezone {
+    pub tz_minuteswest: ::std::os::raw::c_int,
+    pub tz_dsttime: ::std::os::raw::c_int,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct clockinfo {
+    pub hz: ::std::os::raw::c_int,
+    pub tick: ::std::os::raw::c_int,
+    pub tickadj: ::std::os::raw::c_int,
+    pub stathz: ::std::os::raw::c_int,
+    pub profhz: ::std::os::raw::c_int,
+}
+pub type clock_t = __darwin_clock_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct tm {
+    pub tm_sec: ::std::os::raw::c_int,
+    pub tm_min: ::std::os::raw::c_int,
+    pub tm_hour: ::std::os::raw::c_int,
+    pub tm_mday: ::std::os::raw::c_int,
+    pub tm_mon: ::std::os::raw::c_int,
+    pub tm_year: ::std::os::raw::c_int,
+    pub tm_wday: ::std::os::raw::c_int,
+    pub tm_yday: ::std::os::raw::c_int,
+    pub tm_isdst: ::std::os::raw::c_int,
+    pub tm_gmtoff: ::std::os::raw::c_long,
+    pub tm_zone: *mut ::std::os::raw::c_char,
+}
+unsafe extern "C" {
+    pub static mut tzname: [*mut ::std::os::raw::c_char; 0usize];
+}
+unsafe extern "C" {
+    pub static mut getdate_err: ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub static mut timezone: ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub static mut daylight: ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn asctime(arg1: *const tm) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn clock() -> clock_t;
+}
+unsafe extern "C" {
+    pub fn ctime(arg1: *const time_t) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn difftime(arg1: time_t, arg2: time_t) -> f64;
+}
+unsafe extern "C" {
+    pub fn getdate(arg1: *const ::std::os::raw::c_char) -> *mut tm;
+}
+unsafe extern "C" {
+    pub fn gmtime(arg1: *const time_t) -> *mut tm;
+}
+unsafe extern "C" {
+    pub fn localtime(arg1: *const time_t) -> *mut tm;
+}
+unsafe extern "C" {
+    pub fn mktime(arg1: *mut tm) -> time_t;
+}
+unsafe extern "C" {
+    pub fn strftime(
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: size_t,
+        arg3: *const ::std::os::raw::c_char,
+        arg4: *const tm,
+    ) -> size_t;
+}
+unsafe extern "C" {
+    pub fn strptime(
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: *mut tm,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn time(arg1: *mut time_t) -> time_t;
+}
+unsafe extern "C" {
+    pub fn tzset();
+}
+unsafe extern "C" {
+    pub fn asctime_r(
+        arg1: *const tm,
+        arg2: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn ctime_r(
+        arg1: *const time_t,
+        arg2: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn gmtime_r(arg1: *const time_t, arg2: *mut tm) -> *mut tm;
+}
+unsafe extern "C" {
+    pub fn localtime_r(arg1: *const time_t, arg2: *mut tm) -> *mut tm;
+}
+unsafe extern "C" {
+    pub fn posix2time(arg1: time_t) -> time_t;
+}
+unsafe extern "C" {
+    pub fn tzsetwall();
+}
+unsafe extern "C" {
+    pub fn time2posix(arg1: time_t) -> time_t;
+}
+unsafe extern "C" {
+    pub fn timelocal(arg1: *mut tm) -> time_t;
+}
+unsafe extern "C" {
+    pub fn timegm(arg1: *mut tm) -> time_t;
+}
+unsafe extern "C" {
+    pub fn nanosleep(__rqtp: *const timespec, __rmtp: *mut timespec) -> ::std::os::raw::c_int;
+}
+pub const clockid_t__CLOCK_REALTIME: clockid_t = 0;
+pub const clockid_t__CLOCK_MONOTONIC: clockid_t = 6;
+pub const clockid_t__CLOCK_MONOTONIC_RAW: clockid_t = 4;
+pub const clockid_t__CLOCK_MONOTONIC_RAW_APPROX: clockid_t = 5;
+pub const clockid_t__CLOCK_UPTIME_RAW: clockid_t = 8;
+pub const clockid_t__CLOCK_UPTIME_RAW_APPROX: clockid_t = 9;
+pub const clockid_t__CLOCK_PROCESS_CPUTIME_ID: clockid_t = 12;
+pub const clockid_t__CLOCK_THREAD_CPUTIME_ID: clockid_t = 16;
+pub type clockid_t = ::std::os::raw::c_uint;
+unsafe extern "C" {
+    pub fn clock_getres(__clock_id: clockid_t, __res: *mut timespec) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn clock_gettime(__clock_id: clockid_t, __tp: *mut timespec) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn clock_gettime_nsec_np(__clock_id: clockid_t) -> __uint64_t;
+}
+unsafe extern "C" {
+    pub fn clock_settime(__clock_id: clockid_t, __tp: *const timespec) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn timespec_get(ts: *mut timespec, base: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn adjtime(arg1: *const timeval, arg2: *mut timeval) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn futimes(arg1: ::std::os::raw::c_int, arg2: *const timeval) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn lutimes(
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const timeval,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn settimeofday(arg1: *const timeval, arg2: *const timezone) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getitimer(arg1: ::std::os::raw::c_int, arg2: *mut itimerval) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn gettimeofday(
+        arg1: *mut timeval,
+        arg2: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn select(
+        arg1: ::std::os::raw::c_int,
+        arg2: *mut fd_set,
+        arg3: *mut fd_set,
+        arg4: *mut fd_set,
+        arg5: *mut timeval,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn setitimer(
+        arg1: ::std::os::raw::c_int,
+        arg2: *const itimerval,
+        arg3: *mut itimerval,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn utimes(
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const timeval,
+    ) -> ::std::os::raw::c_int;
+}
+pub type u_char = ::std::os::raw::c_uchar;
+pub type u_short = ::std::os::raw::c_ushort;
+pub type u_int = ::std::os::raw::c_uint;
+pub type u_long = ::std::os::raw::c_ulong;
+pub type ushort = ::std::os::raw::c_ushort;
+pub type uint = ::std::os::raw::c_uint;
+pub type u_quad_t = u_int64_t;
+pub type quad_t = i64;
+pub type qaddr_t = *mut quad_t;
+pub type caddr_t = *mut ::std::os::raw::c_char;
+pub type daddr_t = i32;
+pub type fixpt_t = u_int32_t;
+pub type blkcnt_t = __darwin_blkcnt_t;
+pub type blksize_t = __darwin_blksize_t;
+pub type gid_t = __darwin_gid_t;
+pub type in_addr_t = __uint32_t;
+pub type in_port_t = __uint16_t;
+pub type ino_t = __darwin_ino_t;
+pub type ino64_t = __darwin_ino64_t;
+pub type key_t = __int32_t;
+pub type nlink_t = __uint16_t;
+pub type off_t = __darwin_off_t;
+pub type segsz_t = i32;
+pub type swblk_t = i32;
+pub type ssize_t = __darwin_ssize_t;
+pub type useconds_t = __darwin_useconds_t;
+pub type rsize_t = __darwin_size_t;
+pub type errno_t = ::std::os::raw::c_int;
+pub type fd_mask = __int32_t;
+pub type pthread_cond_t = __darwin_pthread_cond_t;
+pub type pthread_condattr_t = __darwin_pthread_condattr_t;
+pub type pthread_mutex_t = __darwin_pthread_mutex_t;
+pub type pthread_mutexattr_t = __darwin_pthread_mutexattr_t;
+pub type pthread_once_t = __darwin_pthread_once_t;
+pub type pthread_rwlock_t = __darwin_pthread_rwlock_t;
+pub type pthread_rwlockattr_t = __darwin_pthread_rwlockattr_t;
+pub type pthread_t = __darwin_pthread_t;
+pub type pthread_key_t = __darwin_pthread_key_t;
+pub type fsblkcnt_t = __darwin_fsblkcnt_t;
+pub type fsfilcnt_t = __darwin_fsfilcnt_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct sio_status_s {
+    _unused: [u8; 0],
+}
+pub type sio_status_t = sio_status_s;
+pub type sys_prot_t = ::std::os::raw::c_uint;
+pub type va_list = __darwin_va_list;
+unsafe extern "C" {
+    pub fn renameat(
+        arg1: ::std::os::raw::c_int,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: ::std::os::raw::c_int,
+        arg4: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn renamex_np(
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: ::std::os::raw::c_uint,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn renameatx_np(
+        arg1: ::std::os::raw::c_int,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: ::std::os::raw::c_int,
+        arg4: *const ::std::os::raw::c_char,
+        arg5: ::std::os::raw::c_uint,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn printf(arg1: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+pub type fpos_t = __darwin_off_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __sbuf {
+    pub _base: *mut ::std::os::raw::c_uchar,
+    pub _size: ::std::os::raw::c_int,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __sFILEX {
+    _unused: [u8; 0],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __sFILE {
+    pub _p: *mut ::std::os::raw::c_uchar,
+    pub _r: ::std::os::raw::c_int,
+    pub _w: ::std::os::raw::c_int,
+    pub _flags: ::std::os::raw::c_short,
+    pub _file: ::std::os::raw::c_short,
+    pub _bf: __sbuf,
+    pub _lbfsize: ::std::os::raw::c_int,
+    pub _cookie: *mut ::std::os::raw::c_void,
+    pub _close: ::std::option::Option<
+        unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
+    >,
+    pub _read: ::std::option::Option<
+        unsafe extern "C" fn(
+            arg1: *mut ::std::os::raw::c_void,
+            arg2: *mut ::std::os::raw::c_char,
+            arg3: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int,
+    >,
+    pub _seek: ::std::option::Option<
+        unsafe extern "C" fn(
+            arg1: *mut ::std::os::raw::c_void,
+            arg2: fpos_t,
+            arg3: ::std::os::raw::c_int,
+        ) -> fpos_t,
+    >,
+    pub _write: ::std::option::Option<
+        unsafe extern "C" fn(
+            arg1: *mut ::std::os::raw::c_void,
+            arg2: *const ::std::os::raw::c_char,
+            arg3: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int,
+    >,
+    pub _ub: __sbuf,
+    pub _extra: *mut __sFILEX,
+    pub _ur: ::std::os::raw::c_int,
+    pub _ubuf: [::std::os::raw::c_uchar; 3usize],
+    pub _nbuf: [::std::os::raw::c_uchar; 1usize],
+    pub _lb: __sbuf,
+    pub _blksize: ::std::os::raw::c_int,
+    pub _offset: fpos_t,
+}
+pub type FILE = __sFILE;
+unsafe extern "C" {
+    pub static mut __stdinp: *mut FILE;
+}
+unsafe extern "C" {
+    pub static mut __stdoutp: *mut FILE;
+}
+unsafe extern "C" {
+    pub static mut __stderrp: *mut FILE;
+}
+unsafe extern "C" {
+    pub fn clearerr(arg1: *mut FILE);
+}
+unsafe extern "C" {
+    pub fn fclose(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn feof(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ferror(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fflush(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fgetc(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fgetpos(arg1: *mut FILE, arg2: *mut fpos_t) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fgets(
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: ::std::os::raw::c_int,
+        arg3: *mut FILE,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn fopen(
+        __filename: *const ::std::os::raw::c_char,
+        __mode: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn fprintf(
+        arg1: *mut FILE,
+        arg2: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fputc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fputs(arg1: *const ::std::os::raw::c_char, arg2: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fread(
+        __ptr: *mut ::std::os::raw::c_void,
+        __size: ::std::os::raw::c_ulong,
+        __nitems: ::std::os::raw::c_ulong,
+        __stream: *mut FILE,
+    ) -> ::std::os::raw::c_ulong;
+}
+unsafe extern "C" {
+    pub fn freopen(
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: *mut FILE,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn fscanf(
+        arg1: *mut FILE,
+        arg2: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fseek(
+        arg1: *mut FILE,
+        arg2: ::std::os::raw::c_long,
+        arg3: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fsetpos(arg1: *mut FILE, arg2: *const fpos_t) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ftell(arg1: *mut FILE) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn fwrite(
+        __ptr: *const ::std::os::raw::c_void,
+        __size: ::std::os::raw::c_ulong,
+        __nitems: ::std::os::raw::c_ulong,
+        __stream: *mut FILE,
+    ) -> ::std::os::raw::c_ulong;
+}
+unsafe extern "C" {
+    pub fn getc(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getchar() -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn gets(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn perror(arg1: *const ::std::os::raw::c_char);
+}
+unsafe extern "C" {
+    pub fn putc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn putchar(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn puts(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn remove(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn rename(
+        __old: *const ::std::os::raw::c_char,
+        __new: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn rewind(arg1: *mut FILE);
+}
+unsafe extern "C" {
+    pub fn scanf(arg1: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn setbuf(arg1: *mut FILE, arg2: *mut ::std::os::raw::c_char);
+}
+unsafe extern "C" {
+    pub fn setvbuf(
+        arg1: *mut FILE,
+        arg2: *mut ::std::os::raw::c_char,
+        arg3: ::std::os::raw::c_int,
+        arg4: size_t,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn sprintf(
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn sscanf(
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn tmpfile() -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn tmpnam(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn ungetc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vfprintf(
+        arg1: *mut FILE,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: __builtin_va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vprintf(
+        arg1: *const ::std::os::raw::c_char,
+        arg2: __builtin_va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vsprintf(
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: __builtin_va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ctermid(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn fdopen(arg1: ::std::os::raw::c_int, arg2: *const ::std::os::raw::c_char) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn fileno(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn pclose(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn popen(
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn __srget(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __svfscanf(
+        arg1: *mut FILE,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __swbuf(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn flockfile(arg1: *mut FILE);
+}
+unsafe extern "C" {
+    pub fn ftrylockfile(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn funlockfile(arg1: *mut FILE);
+}
+unsafe extern "C" {
+    pub fn getc_unlocked(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getchar_unlocked() -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn putc_unlocked(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn putchar_unlocked(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getw(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn putw(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn tempnam(
+        __dir: *const ::std::os::raw::c_char,
+        __prefix: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn fseeko(
+        __stream: *mut FILE,
+        __offset: off_t,
+        __whence: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ftello(__stream: *mut FILE) -> off_t;
+}
+unsafe extern "C" {
+    pub fn snprintf(
+        __str: *mut ::std::os::raw::c_char,
+        __size: ::std::os::raw::c_ulong,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vfscanf(
+        __stream: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        arg1: __builtin_va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vscanf(
+        __format: *const ::std::os::raw::c_char,
+        arg1: __builtin_va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vsnprintf(
+        __str: *mut ::std::os::raw::c_char,
+        __size: ::std::os::raw::c_ulong,
+        __format: *const ::std::os::raw::c_char,
+        arg1: __builtin_va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vsscanf(
+        __str: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        arg1: __builtin_va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn dprintf(
+        arg1: ::std::os::raw::c_int,
+        arg2: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vdprintf(
+        arg1: ::std::os::raw::c_int,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getdelim(
+        __linep: *mut *mut ::std::os::raw::c_char,
+        __linecapp: *mut size_t,
+        __delimiter: ::std::os::raw::c_int,
+        __stream: *mut FILE,
+    ) -> ssize_t;
+}
+unsafe extern "C" {
+    pub fn getline(
+        __linep: *mut *mut ::std::os::raw::c_char,
+        __linecapp: *mut size_t,
+        __stream: *mut FILE,
+    ) -> ssize_t;
+}
+unsafe extern "C" {
+    pub fn fmemopen(
+        __buf: *mut ::std::os::raw::c_void,
+        __size: size_t,
+        __mode: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn open_memstream(
+        __bufp: *mut *mut ::std::os::raw::c_char,
+        __sizep: *mut size_t,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub static sys_nerr: ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub static sys_errlist: [*const ::std::os::raw::c_char; 0usize];
+}
+unsafe extern "C" {
+    pub fn asprintf(
+        arg1: *mut *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ctermid_r(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn fgetln(arg1: *mut FILE, arg2: *mut size_t) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn fmtcheck(
+        arg1: *const ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+    ) -> *const ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn fpurge(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn setbuffer(
+        arg1: *mut FILE,
+        arg2: *mut ::std::os::raw::c_char,
+        arg3: ::std::os::raw::c_int,
+    );
+}
+unsafe extern "C" {
+    pub fn setlinebuf(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vasprintf(
+        arg1: *mut *mut ::std::os::raw::c_char,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn funopen(
+        arg1: *const ::std::os::raw::c_void,
+        arg2: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *mut ::std::os::raw::c_void,
+                arg2: *mut ::std::os::raw::c_char,
+                arg3: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        arg3: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *mut ::std::os::raw::c_void,
+                arg2: *const ::std::os::raw::c_char,
+                arg3: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        arg4: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *mut ::std::os::raw::c_void,
+                arg2: fpos_t,
+                arg3: ::std::os::raw::c_int,
+            ) -> fpos_t,
+        >,
+        arg5: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
+        >,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn __sprintf_chk(
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: ::std::os::raw::c_int,
+        arg3: size_t,
+        arg4: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __snprintf_chk(
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: size_t,
+        arg3: ::std::os::raw::c_int,
+        arg4: size_t,
+        arg5: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __vsprintf_chk(
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: ::std::os::raw::c_int,
+        arg3: size_t,
+        arg4: *const ::std::os::raw::c_char,
+        arg5: va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __vsnprintf_chk(
+        arg1: *mut ::std::os::raw::c_char,
+        arg2: size_t,
+        arg3: ::std::os::raw::c_int,
+        arg4: size_t,
+        arg5: *const ::std::os::raw::c_char,
+        arg6: va_list,
+    ) -> ::std::os::raw::c_int;
 }
 pub type max_align_t = f64;
 pub type u8_t = u8;
@@ -6018,7 +6027,7 @@ unsafe extern "C" {
 unsafe extern "C" {
     pub fn pbuf_strstr(p: *const pbuf, substr: *const ::std::os::raw::c_char) -> u16_t;
 }
-pub type mem_size_t = u32_t;
+pub type mem_size_t = size_t;
 unsafe extern "C" {
     pub fn mem_init();
 }

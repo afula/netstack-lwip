@@ -74,6 +74,7 @@ fn compile_lwip() {
         // .file("lwip/src/core/ipv6/mld6.c")
         .file("lwip/src/core/ipv6/nd6.c")
         .file("custom/sys_arch.c")
+        .file("custom/mem.c")
         .include("custom")
         .include("lwip/src/include")
         .warnings(false)

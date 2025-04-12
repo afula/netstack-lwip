@@ -74,6 +74,7 @@
 #endif
 #elif defined __linux__
 #include <endian.h>
+#include <stdlib.h>
 
 // BYTE_ORDER by default is LITTLE_ENDIAN if undefined,
 // detects only big endian here.

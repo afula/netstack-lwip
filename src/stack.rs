@@ -4,7 +4,11 @@ use std::{io, os::raw, pin::Pin, sync::Once, time};
 use futures::sink::Sink;
 use futures::stream::Stream;
 use futures::task::{Context, Poll, Waker};
-use tokio::sync::mpsc::{channel, Receiver, Sender};
+use futures::StreamExt;
+// use tokio::sync::mpsc::{channel, Receiver, Sender};
+use kanal::AsyncReceiver as Receiver;
+use kanal::AsyncSender as Sender;
+
 
 use super::lwip::*;
 use super::output::{output_ip4, output_ip6, OUTPUT_CB_PTR};
@@ -52,7 +56,7 @@ impl NetStack {
             (*netif_list).mtu = 1500;
         }
 
-        let (tx, rx): (Sender<Vec<u8>>, Receiver<Vec<u8>>) = channel(buffer_size);
+        let (tx, rx): (Sender<Vec<u8>>, Receiver<Vec<u8>>) = kanal::bounded_async(buffer_size);
 
         let stack = Box::pin(NetStack {
             waker: None,
@@ -104,7 +108,7 @@ impl Stream for NetStack {
 
     fn poll_next(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Option<Self::Item>> {
         let me = unsafe { self.get_unchecked_mut() };
-        match me.rx.poll_recv(cx) {
+        match me.rx.stream().poll_next_unpin(cx) {
             Poll::Ready(Some(pkt)) => Poll::Ready(Some(Ok(pkt))),
             Poll::Ready(None) => Poll::Ready(None),
             Poll::Pending => {

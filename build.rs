@@ -35,46 +35,47 @@ fn sdk_include_path() -> Option<String> {
 }
 
 fn compile_lwip() {
-    println!("cargo:rerun-if-changed=src/lwip");
+    println!("cargo:rerun-if-changed=lwip/src");
+    println!("cargo:rerun-if-changed=custom");
     let mut build = cc::Build::new();
     build
-        .file("src/lwip/core/init.c")
-        .file("src/lwip/core/def.c")
-        // .file("src/lwip/core/dns.c")
-        .file("src/lwip/core/inet_chksum.c")
-        .file("src/lwip/core/ip.c")
-        .file("src/lwip/core/mem.c")
-        .file("src/lwip/core/memp.c")
-        .file("src/lwip/core/netif.c")
-        .file("src/lwip/core/pbuf.c")
-        .file("src/lwip/core/raw.c")
-        // .file("src/lwip/core/stats.c")
-        // .file("src/lwip/core/sys.c")
-        .file("src/lwip/core/tcp.c")
-        .file("src/lwip/core/tcp_in.c")
-        .file("src/lwip/core/tcp_out.c")
-        .file("src/lwip/core/timeouts.c")
-        .file("src/lwip/core/udp.c")
-        // .file("src/lwip/core/ipv4/autoip.c")
-        // .file("src/lwip/core/ipv4/dhcp.c")
-        // .file("src/lwip/core/ipv4/etharp.c")
-        .file("src/lwip/core/ipv4/icmp.c")
-        // .file("src/lwip/core/ipv4/igmp.c")
-        .file("src/lwip/core/ipv4/ip4_frag.c")
-        .file("src/lwip/core/ipv4/ip4.c")
-        .file("src/lwip/core/ipv4/ip4_addr.c")
-        // .file("src/lwip/core/ipv6/dhcp6.c")
-        // .file("src/lwip/core/ipv6/ethip6.c")
-        .file("src/lwip/core/ipv6/icmp6.c")
-        // .file("src/lwip/core/ipv6/inet6.c")
-        .file("src/lwip/core/ipv6/ip6.c")
-        .file("src/lwip/core/ipv6/ip6_addr.c")
-        .file("src/lwip/core/ipv6/ip6_frag.c")
-        // .file("src/lwip/core/ipv6/mld6.c")
-        .file("src/lwip/core/ipv6/nd6.c")
-        .file("src/lwip/custom/sys_arch.c")
-        .include("src/lwip/custom")
-        .include("src/lwip/include")
+        .file("lwip/src/core/init.c")
+        .file("lwip/src/core/def.c")
+        // .file("lwip/src/core/dns.c")
+        .file("lwip/src/core/inet_chksum.c")
+        .file("lwip/src/core/ip.c")
+        .file("lwip/src/core/mem.c")
+        .file("lwip/src/core/memp.c")
+        .file("lwip/src/core/netif.c")
+        .file("lwip/src/core/pbuf.c")
+        .file("lwip/src/core/raw.c")
+        // .file("lwip/src/core/stats.c")
+        // .file("lwip/src/core/sys.c")
+        .file("lwip/src/core/tcp.c")
+        .file("lwip/src/core/tcp_in.c")
+        .file("lwip/src/core/tcp_out.c")
+        .file("lwip/src/core/timeouts.c")
+        .file("lwip/src/core/udp.c")
+        // .file("lwip/src/core/ipv4/autoip.c")
+        // .file("lwip/src/core/ipv4/dhcp.c")
+        // .file("lwip/src/core/ipv4/etharp.c")
+        .file("lwip/src/core/ipv4/icmp.c")
+        // .file("lwip/src/core/ipv4/igmp.c")
+        .file("lwip/src/core/ipv4/ip4_frag.c")
+        .file("lwip/src/core/ipv4/ip4.c")
+        .file("lwip/src/core/ipv4/ip4_addr.c")
+        // .file("lwip/src/core/ipv6/dhcp6.c")
+        // .file("lwip/src/core/ipv6/ethip6.c")
+        .file("lwip/src/core/ipv6/icmp6.c")
+        // .file("lwip/src/core/ipv6/inet6.c")
+        .file("lwip/src/core/ipv6/ip6.c")
+        .file("lwip/src/core/ipv6/ip6_addr.c")
+        .file("lwip/src/core/ipv6/ip6_frag.c")
+        // .file("lwip/src/core/ipv6/mld6.c")
+        .file("lwip/src/core/ipv6/nd6.c")
+        .file("custom/sys_arch.c")
+        .include("custom")
+        .include("lwip/src/include")
         .warnings(false)
         .flag_if_supported("-Wno-everything");
     if let Some(sdk_include_path) = sdk_include_path() {
@@ -87,7 +88,7 @@ fn compile_lwip() {
 fn generate_lwip_bindings() {
     println!("cargo:rustc-link-lib=lwip");
     // println!("cargo:rerun-if-changed=src/wrapper.h");
-    println!("cargo:include=src/lwip/include");
+    println!("cargo:include=lwip/src/include");
 
     let sdk_include_path = sdk_include_path();
 
@@ -96,8 +97,8 @@ fn generate_lwip_bindings() {
     let mut builder = bindgen::Builder::default()
         .header("src/wrapper.h")
         .size_t_is_usize(false)
-        .clang_arg("-I./src/lwip/include")
-        .clang_arg("-I./src/lwip/custom")
+        .clang_arg("-I./lwip/src/include")
+        .clang_arg("-I./custom")
         .clang_arg("-Wno-everything")
         .layout_tests(false)
         .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()));

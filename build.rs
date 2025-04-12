@@ -119,9 +119,9 @@ fn generate_lwip_bindings() {
 }
 
 fn main() {
-    println!("cargo:rerun-if-changed=src/wrapper.h");
-    println!("cargo:rerun-if-changed=lwip");
-    println!("cargo:rerun-if-changed=custom");
+    // println!("cargo:rerun-if-changed=src/wrapper.h");
+    // println!("cargo:rerun-if-changed=lwip");
+    // println!("cargo:rerun-if-changed=custom");
     generate_lwip_bindings();
     compile_lwip();
 }

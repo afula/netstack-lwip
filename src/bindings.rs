@@ -6942,7 +6942,6 @@ pub struct udp_hdr {
     pub len: u16_t,
     pub chksum: u16_t,
 }
-#[doc = " Function prototype for udp pcb receive callback functions\n addr and port are in same byte order as in the pcb\n The callback is responsible for freeing the pbuf\n if it's not used any more.\n\n ATTENTION: Be aware that 'addr' might point into the pbuf 'p' so freeing this pbuf\n            can make 'addr' invalid, too.\n\n @param arg user supplied argument (udp_pcb.recv_arg)\n @param pcb the udp_pcb which received data\n @param p the packet buffer that was received\n @param addr the remote IP address from which the packet was received\n @param port the remote port from which the packet was received"]
 pub type udp_recv_fn = ::std::option::Option<
     unsafe extern "C" fn(
         arg: *mut ::std::os::raw::c_void,
@@ -6950,6 +6949,8 @@ pub type udp_recv_fn = ::std::option::Option<
         p: *mut pbuf,
         addr: *const ip_addr_t,
         port: u16_t,
+        dest_addr: *const ip_addr_t,
+        dest_port: u16_t,
     ),
 >;
 #[doc = " the UDP protocol control block"]
@@ -7007,6 +7008,8 @@ unsafe extern "C" {
         dst_ip: *const ip_addr_t,
         dst_port: u16_t,
         netif: *mut netif,
+        src_ip: *const ip_addr_t,
+        src_port: u16_t,
     ) -> err_t;
 }
 unsafe extern "C" {
@@ -7017,6 +7020,7 @@ unsafe extern "C" {
         dst_port: u16_t,
         netif: *mut netif,
         src_ip: *const ip_addr_t,
+        src_port: u16_t,
     ) -> err_t;
 }
 unsafe extern "C" {
@@ -7025,6 +7029,8 @@ unsafe extern "C" {
         p: *mut pbuf,
         dst_ip: *const ip_addr_t,
         dst_port: u16_t,
+        src_ip: *const ip_addr_t,
+        src_port: u16_t,
     ) -> err_t;
 }
 unsafe extern "C" {
@@ -7039,6 +7045,8 @@ unsafe extern "C" {
         netif: *mut netif,
         have_chksum: u8_t,
         chksum: u16_t,
+        src_ip: *const ip_addr_t,
+        src_port: u16_t,
     ) -> err_t;
 }
 unsafe extern "C" {
@@ -7049,6 +7057,8 @@ unsafe extern "C" {
         dst_port: u16_t,
         have_chksum: u8_t,
         chksum: u16_t,
+        src_ip: *const ip_addr_t,
+        src_port: u16_t,
     ) -> err_t;
 }
 unsafe extern "C" {
@@ -7069,6 +7079,7 @@ unsafe extern "C" {
         have_chksum: u8_t,
         chksum: u16_t,
         src_ip: *const ip_addr_t,
+        src_port: u16_t,
     ) -> err_t;
 }
 unsafe extern "C" {

@@ -7,7 +7,7 @@ use std::{
 };
 use tokio::sync::mpsc::{UnboundedReceiver, UnboundedSender};
 
-use super::LWIPMutexGuard;
+use spin::mutex::TicketMutexGuard;
 
 pub struct TcpStreamContextInner {
     pub local_addr: SocketAddr,
@@ -79,7 +79,7 @@ impl TcpStreamContext {
     /// # Panics
     ///
     /// Panics if another reference to inner data exists.
-    pub fn with_lock<'a>(&'a self, _guard: &'a LWIPMutexGuard) -> TcpStreamContextRef<'a> {
+    pub fn with_lock<'a>(&'a self, _guard: &'a TicketMutexGuard<()>) -> TcpStreamContextRef<'a> {
         if self.borrowed.swap(true, Ordering::Acquire) {
             panic!("TcpStreamContext locked twice within a locked period")
         }

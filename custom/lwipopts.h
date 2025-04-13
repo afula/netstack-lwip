@@ -70,7 +70,7 @@
 #define LWIP_TCP_KEEPALIVE 1
 #define MEMP_NUM_TCP_PCB 256
 #else
-#define MEMP_NUM_TCP_PCB 1024
+#define MEMP_NUM_TCP_PCB 4096
 #endif
 #elif defined __linux__
 #include <endian.h>
@@ -99,9 +99,16 @@
 #define LWIP_CHECKSUM_ON_COPY 1
 #define LWIP_CHKSUM_ALGORITHM 3
 
-#define TCP_MSS 1460
-#define TCP_WND (32 * TCP_MSS)
-#define TCP_SND_BUF (16 * TCP_MSS)
+#define TCP_MSS 8191
+#define TCP_WND (8 * TCP_MSS)
+#define TCP_SND_BUF (8 * TCP_MSS)
+/**
+ * TCP_SND_QUEUELEN: TCP sender buffer space (pbufs). This must be at least
+ * as much as (2 * TCP_SND_BUF/TCP_MSS) for things to work.
+ */
+#define TCP_SND_QUEUELEN                ((128 * (TCP_SND_BUF) + (TCP_MSS - 1))/(TCP_MSS))
+
+
 
 #if defined __APPLE__
 #include <TargetConditionals.h>
@@ -114,8 +121,8 @@
 #define MEM_SIZE (2 * 1024 * 1024)
 #endif
 
-#define MEMP_NUM_TCP_SEG 4096
-#define PBUF_POOL_SIZE 512
+#define MEMP_NUM_TCP_SEG 8192
+#define PBUF_POOL_SIZE 32
 
 // #define TCP_MSS 1460
 // #define TCP_WND (16 * TCP_MSS)
@@ -187,5 +194,118 @@ void *hev_malloc (size_t size);
 
 void *hev_calloc (size_t nmemb, size_t size);
 #define MEM_CUSTOM_CALLOC hev_calloc
+
+/*
+   ------------------------------------------------
+   ---------- Internal Memory Pool Sizes ----------
+   ------------------------------------------------
+*/
+/**
+ * MEMP_NUM_PBUF: the number of memp struct pbufs (used for PBUF_ROM and PBUF_REF).
+ * If the application sends a lot of data out of ROM (or other static memory),
+ * this should be set high.
+ */
+#define MEMP_NUM_PBUF                   8192
+
+/**
+ * MEMP_NUM_RAW_PCB: Number of raw connection PCBs
+ * (requires the LWIP_RAW option)
+ */
+#define MEMP_NUM_RAW_PCB                4
+
+/**
+ * MEMP_NUM_UDP_PCB: the number of UDP protocol control blocks. One
+ * per active UDP "connection".
+ * (requires the LWIP_UDP option)
+ */
+#define MEMP_NUM_UDP_PCB                1024
+
+/**
+ * MEMP_NUM_TCP_PCB_LISTEN: the number of listening TCP connections.
+ * (requires the LWIP_TCP option)
+ */
+#define MEMP_NUM_TCP_PCB_LISTEN         16
+
+/**
+ * MEMP_NUM_REASSDATA: the number of simultaneously IP packets queued for
+ * reassembly (whole packets, not fragments!)
+ */
+#define MEMP_NUM_REASSDATA              1
+
+/**
+ * MEMP_NUM_ARP_QUEUE: the number of simulateously queued outgoing
+ * packets (pbufs) that are waiting for an ARP request (to resolve
+ * their destination address) to finish.
+ * (requires the ARP_QUEUEING option)
+ */
+#define MEMP_NUM_ARP_QUEUE              2
+
+/**
+ * MEMP_NUM_SYS_TIMEOUT: the number of simulateously active timeouts.
+ * (requires NO_SYS==0)
+ */
+#define MEMP_NUM_SYS_TIMEOUT            8
+
+/**
+ * MEMP_NUM_NETBUF: the number of struct netbufs.
+ * (only needed if you use the sequential API, like api_lib.c)
+ */
+#define MEMP_NUM_NETBUF                 2
+
+/**
+ * MEMP_NUM_NETCONN: the number of struct netconns.
+ * (only needed if you use the sequential API, like api_lib.c)
+ */
+#define MEMP_NUM_NETCONN               32
+
+/**
+ * MEMP_NUM_TCPIP_MSG_API: the number of struct tcpip_msg, which are used
+ * for callback/timeout API communication.
+ * (only needed if you use tcpip.c)
+ */
+#define MEMP_NUM_TCPIP_MSG_API          8
+
+/**
+ * MEMP_NUM_TCPIP_MSG_INPKT: the number of struct tcpip_msg, which are used
+ * for incoming packets.
+ * (only needed if you use tcpip.c)
+ */
+#define MEMP_NUM_TCPIP_MSG_INPKT        8
+
+/*
+   ----------------------------------
+   ---------- Pbuf options ----------
+   ----------------------------------
+*/
+/**
+ * PBUF_LINK_HLEN: the number of bytes that should be allocated for a
+ * link level header. The default is 14, the standard value for
+ * Ethernet.
+ */
+#define PBUF_LINK_HLEN                  16
+
+/**
+ * PBUF_POOL_BUFSIZE: the size of each pbuf in the pbuf pool. The default is
+ * designed to accommodate single full size TCP frame in one pbuf, including
+ * TCP_MSS, IP header, and link header.
+*
+ */
+#define PBUF_POOL_BUFSIZE               LWIP_MEM_ALIGN_SIZE(TCP_MSS+40+PBUF_LINK_HLEN)
+
+
+/*
+   ---------------------------------------
+   ---------- Threading options ----------
+   ---------------------------------------
+*/
+
+#define LWIP_TCPIP_CORE_LOCKING    1
+
+#if !NO_SYS
+void sys_check_core_locking(void);
+#define LWIP_ASSERT_CORE_LOCKED()  sys_check_core_locking()
+#endif
+
+
 
 #endif
